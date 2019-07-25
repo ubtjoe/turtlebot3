@@ -3,17 +3,15 @@
     <arg name="multi_robot_name" value=""/>
   </include>
   <include file="$(find realsense2_camera)/launch/rs_rgbd.launch">
-    <arg name="enable_gyro" value="false"/>
-    <arg name="enable_accel" value="false"/>
+    <arg name="enable_imu" value="false"/>
+    <arg name="enable_infra1" value="false">
+    <arg name="enable_infra2" value="false">
     <arg name="depth_width" value="424"/>
     <arg name="depth_height" value="240"/>
     <arg name="depth_fps" value="15"/>
     <arg name="color_width" value="424"/>
     <arg name="color_height" value="240"/>
     <arg name="color_fps" value="15"/>
-    <arg name="infra_width" value="424"/>
-    <arg name="infra_height" value="240"/>
-    <arg name="infra_fps" value="15"/>
   </include>
   <node pkg="turtlebot3_bringup" type="turtlebot3_diagnostics" name="turtlebot3_diagnostics" output="screen"/>
 </launch>
